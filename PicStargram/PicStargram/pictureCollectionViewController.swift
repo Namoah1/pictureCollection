@@ -46,7 +46,8 @@ class pictureCollectionViewController: UICollectionViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let blowUpVC = segue.destination as? BlownUpViewController {
             if let selectedImage = sender as? UIImage {
-                blowUpVC.blownUpImageView.image = selectedImage 
+                blowUpVC.picture = selectedImage //fix
+                //blowUpVC.blownUpImageView.image = selectedImage //previous line
                 
             }
         }
